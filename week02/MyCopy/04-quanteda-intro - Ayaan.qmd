@@ -15,7 +15,7 @@ First, let's do some "directory management" by specifying the file path to the f
 
 ```{r}
 ## What is the full path to the directory for this week's seminar files?
-wdir <- "" # <- paste your path here
+wdir <- "C:\\Users\\ayaan\\OneDrive - London School of Economics\\Academics\\MPA_DSPP\\Text Analysis\\lectures\\week02" # <- paste your path here
 ```
 
 We will again look at the set of tweets posted by Donald Trump's Twitter account from January 2017 through June 2018. These are contained in a JSON file called `trump-tweets.json` available on the course website (see link below). First, let's download the file directly in R:
@@ -46,7 +46,7 @@ library("streamR")
 
 tweets <- parseTweets(lfile)
 twcorpus <- corpus(tweets$text)
-summary(twcorpus, n=10)
+summary(twcorpus, n=5)
 ```
 
 We can tokenise the documents with the `tokens()` function. We'll do it using a pipe:
